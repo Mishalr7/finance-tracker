@@ -1,21 +1,22 @@
 # 💰 FinanceTracker
 
-A full-stack personal finance tracking web application that helps users track income, expenses, and gain insights through analytics.
+> A full-stack personal finance tracking web application that helps users manage income, expenses, and financial insights in one place.
 
-Built with **React + Vite + Tailwind CSS** on the frontend and **Node.js + Express + MongoDB** on the backend, with secure JWT authentication.
+🔗 **Live Demo:**
+[https://finance-tracker-iota-blush.vercel.app/](https://finance-tracker-iota-blush.vercel.app/)
 
 ---
 
 ## 🚀 Features
 
-* 🔐 User authentication (Signup / Login with JWT)
+* 🔐 Secure authentication (Signup / Login with JWT)
 * 💵 Add income & expense transactions
-* 📊 Dashboard with totals (balance, income, expenses)
-* 🕘 Transaction history with filters
+* 📊 Dashboard with balance, income & expense totals
+* 🕘 Transaction history
 * 📈 Analytics (monthly overview & category breakdown)
-* 📱 Fully responsive (mobile, tablet, desktop)
+* 📱 Fully responsive design (mobile, tablet, desktop)
 * 🎨 Modern UI with Tailwind CSS & Framer Motion
-* 🔒 Secure backend with protected routes
+* 🔒 Protected backend routes
 
 ---
 
@@ -28,14 +29,22 @@ Built with **React + Vite + Tailwind CSS** on the frontend and **Node.js + Expre
 * Framer Motion
 * Chart.js
 * React Router
+* Fetch API
 
 ### Backend
 
 * Node.js
 * Express.js
-* MongoDB (Mongoose)
+* MongoDB Atlas
+* Mongoose
 * JWT Authentication
 * bcrypt
+
+### Deployment
+
+* Frontend → Vercel
+* Backend → Render
+* Database → MongoDB Atlas
 
 ---
 
@@ -63,23 +72,38 @@ finance-tracker/
 
 ---
 
+## 🌍 Production Architecture
+
+```
+User (Browser)
+     ↓
+Vercel (Frontend)
+     ↓
+Render (Backend API)
+     ↓
+MongoDB Atlas (Database)
+```
+
+---
+
 ## ⚙️ Environment Variables
 
 ### Backend (`server/.env`)
 
 ```
 MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
+JWT_SECRET=your_random_secure_string
 PORT=5000
+CLIENT_URL=https://finance-tracker-iota-blush.vercel.app
 ```
 
 ### Frontend (`apps/web/.env`)
 
 ```
-VITE_API_URL=http://localhost:5000
+VITE_API_URL=https://finance-tracker-api-xyr9.onrender.com
 ```
 
-> ⚠️ `.env` files are intentionally NOT committed to GitHub.
+> ⚠️ `.env` files are intentionally NOT committed to GitHub for security reasons.
 
 ---
 
@@ -88,7 +112,7 @@ VITE_API_URL=http://localhost:5000
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/finance-tracker.git
+git clone https://github.com/Mishalr7/finance-tracker.git
 cd finance-tracker
 ```
 
@@ -121,40 +145,32 @@ npm run dev
 ```
 
 Frontend runs on: `http://localhost:3000`
-
 Backend runs on: `http://localhost:5000`
 
 ---
 
-## 🌍 Deployment (Planned / In Progress)
-
-* Frontend: **Vercel / Netlify**
-* Backend: **Render / Railway**
-* Database: **MongoDB Atlas**
-
----
-
-## 🧠 Learning Outcomes
-
-This project demonstrates:
+## 🧠 What This Project Demonstrates
 
 * Full-stack application architecture
-* Authentication & authorization
-* Secure handling of secrets
-* Responsive UI design
+* JWT-based authentication & protected routes
+* Secure environment variable handling
 * REST API design
-* Production-ready Git & deployment practices
+* MongoDB schema modeling with Mongoose
+* CORS configuration for production
+* Deployment workflow (Vercel + Render + Atlas)
+* Real-world debugging & deployment practices
 
 ---
 
-## 📌 Future Improvements
+## 🔮 Future Improvements
 
 * Email verification
-* Password reset
-* Export transactions (CSV/PDF)
+* Password reset functionality
+* Export transactions (CSV / PDF)
 * Dark mode
 * Recurring transactions
-* Budget limits
+* Budget limits & alerts
+* Performance optimization for charts
 
 ---
 
@@ -162,10 +178,11 @@ This project demonstrates:
 
 **Mishal K**
 Computer Science Engineering Student
-Aspiring Full-Stack & Backend Developer
+Aspiring Backend & Full-Stack Developer
 
 ---
 
-## ⭐️ Support
+## ⭐ Support
 
-If you find this project helpful, consider starring the repository ⭐
+If you find this project helpful, consider giving it a star ⭐
+It helps and motivates further development.
