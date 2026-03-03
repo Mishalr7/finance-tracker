@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 
-const API_URL = "http://localhost:5000/api/transactions";
+const API_URL = `${import.meta.env.VITE_API_URL}/api/transactions`;
 
 export const useTransactions = () => {
   const [loading, setLoading] = useState(false);
